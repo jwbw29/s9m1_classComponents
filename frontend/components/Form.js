@@ -13,16 +13,14 @@ export default class Form extends React.Component {
       <div>
         <form>
           <div>
-            <input placeholder="Add To-Do" />
+            <input />
 
             {/* I need this button to send the input to the task list */}
             <button>Submit</button>
-            
           </div>
 
           {/* I need this button to toggle completed tasks */}
           <button>Show Completed</button>
-
         </form>
       </div>
     );

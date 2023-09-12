@@ -10,20 +10,38 @@ import Form from "./Form";
  * * All Handler functions will live HERE
  */
 
+let id = 0;
+let getId = () => ++id;
+
+const initialTodos = [
+  { id: getId(), name: "Walk the dog", completed: false },
+  { id: getId(), name: "Learn React", completed: true },
+  { id: getId(), name: "Have fun", completed: false },
+];
+
 export default class App extends React.Component {
-  onSubmit = () => {
-    // Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
+  state = {
+    todos: initialTodos,
   };
 
-  onEnter = () => {
-    // Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
+  toggleCompletion = (id) => {
+    this.setState({
+      ...this.state,
+      todos: this.state.todos.map((td) => {
+        if (id === td.id) return { ...td, completed: !td.completed };
+        return td;
+      }),
+    });
   };
 
   render() {
     return (
       <div>
         <h1>Todos:</h1>
-        <TodoList />
+        <TodoList
+          todos={this.state.todos}
+          toggleCompletion={this.toggleCompletion}
+        />
         <Form />
       </div>
     );

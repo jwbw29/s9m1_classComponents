@@ -7,11 +7,12 @@ import Todo from "./Todo";
 
 export default class TodoList extends React.Component {
   render() {
+    const { todos, toggleCompletion } = this.props;
     return (
       <div id="todos">
-        {/* Once a todo is submitted, the Todo List should re-render and show the added todo */}
-        <Todo />
-        {/* Receives todo **AND ITERATES OVER THE LIST** generating a new '<Todo />' **FOR EACH** element in the array */}
+        {todos.map((todo) => (
+          <Todo key={todo.id} todo={todo} toggleCompletion={toggleCompletion} />
+        ))}
       </div>
     );
   }
