@@ -18,16 +18,16 @@ In this project you will build an application that allows for todos to be added,
   ```js
   [
     {
-      name: 'Organize Garage',
+      name: "Organize Garage",
       id: 1528817077286, // could look different, you could use a timestamp to generate it
-      completed: false
+      completed: false,
     },
     {
-      name: 'Bake Cookies',
+      name: "Bake Cookies",
       id: 1528817084358,
-      completed: false
-    }
-  ]
+      completed: false,
+    },
+  ];
   ```
 
 - Allow for a todo's "completed" status to be toggled when clicking on an item.
@@ -51,8 +51,8 @@ In this project you will build an application that allows for todos to be added,
   - All of your application data will be stored here on `<App />`.
   - All of your `handler` functions should live here on `<App />`.
 - `<TodoList />` receives your todos array and iterates over the list generating a new `<Todo />` for each element in the array.
-- `<Todo />` is a component that takes in the `todo` data and displays the task to the screen.
-- `<Form />` will hold your input field and your `Add Todo` and `Clear Completed` buttons.
+- ~~`<Todo />` is a component that takes in the `todo` data and displays the task to the screen.~~
+- ~~`<Form />` will hold your input field and your `Add Todo` and `Clear Completed` buttons.~~
   - Your input field should take in user input, and allow a user to press `Enter` or click on the `Submit Button` to add a todo to your list.
   - Once a todo is submitted, the Todo List should re-render and show the added todo.
 
@@ -60,3 +60,12 @@ In this project you will build an application that allows for todos to be added,
 
 - [ ] Make commits often but avoid committing broken code.
 - [ ] Make sure to push code at regular intervals to back it up to the cloud.
+
+# My To-dos
+
+- [x] Build the layout
+      [x] Todos header
+      [x] todo list container
+      [x] Form - input - submit button - show/hide button
+- [ ] Build out functionality
+      [ ]

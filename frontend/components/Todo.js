@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 /** Notes
  * * Component that takes in the `todo` data and displays the task to the screen
@@ -7,9 +7,11 @@ import React from 'react'
 export default class Todo extends React.Component {
   render() {
     return (
-      <div>
-        Todo
+      <div className="todo">
+        <ul>
+          <li>New To-do</li>
+        </ul>
       </div>
-    )
+    );
   }
 }
