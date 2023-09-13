@@ -24,6 +24,13 @@ export default class App extends React.Component {
     todos: initialTodos,
   };
 
+  addTodo = (name) => {
+    this.setState({
+      ...this.state,
+      todos: this.state.todos.concat({ id: getId(), completed: false, name }),
+    });
+  };
+
   toggleCompletion = (id) => {
     this.setState({
       ...this.state,
@@ -42,7 +49,7 @@ export default class App extends React.Component {
           todos={this.state.todos}
           toggleCompletion={this.toggleCompletion}
         />
-        <Form />
+        <Form addTodo={this.addTodo} />
       </div>
     );
   }

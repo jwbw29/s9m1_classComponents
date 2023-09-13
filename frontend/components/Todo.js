@@ -9,7 +9,7 @@ export default class Todo extends React.Component {
     const { id, name, completed } = this.props.todo;
     const { toggleCompletion } = this.props;
     return (
-      <div className="todo" onClick={() => toggleCompletion(id)}>
+      <div onClick={() => toggleCompletion(id)}>
         <ul>
           <li>
             {name} {completed && "✅"}
